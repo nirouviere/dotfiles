@@ -1,0 +1,11 @@
+[alias]
+	st = status
+	br = branch
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ci = commit
+[core]
+	autocrlf = input
+[user]
+	name = Nicolas Rouviere
+	email = nicolas.rouviere@nicolasrouviere.me

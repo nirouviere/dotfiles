@@ -139,3 +139,5 @@ inoremap <silent><expr> <TAB>
 		let col = col('.') - 1
 		return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
+
+highlight Pmenu ctermbg=4 guibg=#424242 guifg=#ffffff

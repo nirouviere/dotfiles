@@ -19,14 +19,16 @@ Plugin 'SirVer/ultisnips'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'honza/vim-snippets'
 Plugin 'eugen0329/vim-esearch'
+Plugin 'rakr/vim-one'
 " All of your Plugins must be added before the following line
 call vundle#end()    
 
 set termguicolors
 syntax on
 
-set background=dark
-colorscheme monokai
+set background=light
+let g:one_allow_italics = 1
+colorscheme one
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " 
 """"""""""""""""""""""""""""""""""""""""""""""""""

@@ -1,0 +1,25 @@
+###################### Misc
+e graph.offset=true
+
+
+###################### Colors
+ec prompt rgb:000000
+ec offset rgb:000000
+ec call rgb:ffaf00
+ec comment rgb:b2b2b2
+ec num rgb:d70000
+ec usrcmt rgb:585858
+ec comment rgb:585858
+ec args rgb:ff0000
+
+# Instruction color scheme
+ec mov rgb:0000ff
+ec jmp rgb:0000ff
+ec cjmp rgb:0000ff
+ec cmp rgb:0000ff
+ec math rgb:0000ff
+ec push rgb:0000ff
+ec reg rgb:000000
+ec pop rgb:0000ff
+ec ret rgb:0000ff
+ec bin rgb:0000ff

@@ -11,15 +11,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'SirVer/ultisnips'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'honza/vim-snippets'
 Plugin 'eugen0329/vim-esearch'
-Plugin 'rakr/vim-one'
+Plugin 'NLKNguyen/papercolor-theme'
 " All of your Plugins must be added before the following line
 call vundle#end()    
 
@@ -27,15 +24,14 @@ set termguicolors
 syntax on
 
 set background=light
-let g:one_allow_italics = 1
-colorscheme one
+colorscheme PaperColor
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set nu
 filetype plugin indent on
 
-let mapleader = "\\"
+let mapleader = " "
 inoremap jj <Esc>
 
 nnoremap <Leader>s :w<CR>
@@ -43,12 +39,7 @@ nnoremap <Leader>q :q<CR>
 
 set tabstop=4
 set shiftwidth=4
-
 set cursorline
-"hi CursorLine term=bold cterm=bold guibg=Grey40
-"
-hi Normal ctermbg=259
-
 
 """"""""""""""""""""""""""""""""""""""""
 "              Plugins                 "
@@ -56,19 +47,9 @@ hi Normal ctermbg=259
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nnoremap <F2> :NERDTreeToggle<CR>
-
-" Press F3 to toggle highlighting on/off, and show current value.
 noremap <F3> :set hlsearch! hlsearch?<CR>
 nnoremap <F4> :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
-
 nnoremap <F5> :TagbarToggle<CR>
-
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_experimental_template_highlight = 1
-let g:cpp_concepts_highlight = 1
 
 
 set wildchar=<Tab> wildmenu wildmode=full
@@ -84,17 +65,12 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
-
 set backspace=indent,eol,start
 
 if executable("ag")
     let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
 
-nnoremap <silent><C-p> :CtrlSpace O<CR>
 nnoremap <C-Space> :CtrlSpace<CR>
 
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
@@ -106,11 +82,6 @@ hi CtrlSpaceSelected ctermfg=White ctermbg=DarkYellow cterm=bold
 hi link CtrlSpaceNormal Normal
 
 let g:rehash256 = 1
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
@@ -141,3 +112,19 @@ inoremap <silent><expr> <TAB>
 endfunction"}}}
 
 highlight Pmenu ctermbg=4 guibg=#424242 guifg=#ffffff
+
+function! FindFile()
+	let file_list = systemlist("find . -iname OpsService.java")
+	echo file_list
+endfunction
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CtrlP Plugin configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+set rtp+=~/.fzf
+nnoremap <c-p> :FZF<CR>

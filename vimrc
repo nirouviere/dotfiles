@@ -16,15 +16,16 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'eugen0329/vim-esearch'
-Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'tamelion/neovim-molokai'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 " All of your Plugins must be added before the following line
 call vundle#end()    
 
 set termguicolors
 syntax on
 
-set background=light
-colorscheme PaperColor
+let g:rehash256 = 1
+colorscheme monokai
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -112,12 +113,6 @@ inoremap <silent><expr> <TAB>
 endfunction"}}}
 
 highlight Pmenu ctermbg=4 guibg=#424242 guifg=#ffffff
-
-function! FindFile()
-	let file_list = systemlist("find . -iname OpsService.java")
-	echo file_list
-endfunction
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP Plugin configuration

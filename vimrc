@@ -14,10 +14,10 @@ Plugin 'vim-ctrlspace/vim-ctrlspace'
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'eugen0329/vim-esearch'
 Plugin 'tamelion/neovim-molokai'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'nathanaelkane/vim-indent-guides'
 " All of your Plugins must be added before the following line
 call vundle#end()    
 
@@ -88,11 +88,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-let g:esearch = {
-			\ 'out': 'qflist'
-			\}
-let esearch#cmdline#help_prompt = 0
-
 highlight PMenuSel ctermfg=0 ctermbg=14 guifg=#000000 guibg=#e9ff00
 highlight CtrlSpaceSelected ctermfg=0 ctermbg=14 guifg=#000000 guibg=#e9ff00
 
@@ -114,12 +109,13 @@ endfunction"}}}
 
 highlight Pmenu ctermbg=4 guibg=#424242 guifg=#ffffff
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP Plugin configuration
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 set rtp+=~/.fzf
 nnoremap <c-p> :FZF<CR>
+
+cabbr <expr> %% expand('%:p:h')
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guifg=#333333 guibg=#333333
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guifg=#444444 guibg=#444444

@@ -1,6 +1,6 @@
 ###################### Misc
 e graph.offset=true
-
+e scr.color = 3 # all terminal I use support truecolor
 
 ###################### Colors
 ec prompt rgb:000000
@@ -13,13 +13,60 @@ ec comment rgb:585858
 ec args rgb:ff0000
 
 # Instruction color scheme
-ec mov rgb:0000ff
-ec jmp rgb:0000ff
-ec cjmp rgb:0000ff
-ec cmp rgb:0000ff
-ec math rgb:0000ff
-ec push rgb:0000ff
-ec reg rgb:000000
-ec pop rgb:0000ff
+ec comment rgb:f030f0
+ec usrcmt rgb:f030f0
+ec args rgb:f06030
+ec fname rgb:f06000
+ec floc rgb:00ffff
+ec fline rgb:00ffff
+ec flag rgb:00ffff
+ec label rgb:00ffff
+ec help rgb:00ff00
+ec flow rgb:00ffff
+ec flow2 rgb:6090f0
+ec prompt rgb:f0f0c0
+ec offset rgb:30f0f0
+ec input rgb:ffffff
+ec invalid rgb:f06030
+ec other rgb:ffffff
+ec b0x00 rgb:00ff00
+ec b0x7f rgb:00ffff
+ec b0xff rgb:f06030
+ec math rgb:00f000
+ec bin rgb:00f000
+ec btext rgb:ffff00
+ec push rgb:00f000
+ec pop rgb:00f000
+ec crypto rgb:f00060
+ec jmp rgb:00f000
+ec cjmp rgb:00f000
+ec call rgb:ffaf00
+ec nop rgb:0000ff
 ec ret rgb:0000ff
-ec bin rgb:0000ff
+ec trap rgb:f06030
+ec swi rgb:ff00ff
+ec cmp rgb:00f000
+ec reg rgb:ffffff
+ec creg rgb:00ffff
+ec num rgb:f00060
+ec mov rgb:00f000
+ec ai.read rgb:00ff00
+ec ai.write rgb:0000ff
+ec ai.exec rgb:ff0000
+ec ai.seq rgb:ff00ff
+ec ai.ascii rgb:ffff00
+ec graph.box rgb:000000
+ec graph.box2 rgb:ffffff
+ec graph.box3 rgb:ff00ff
+ec graph.box4 rgb:7f7f7f
+ec graph.true rgb:00ff00
+ec graph.false rgb:ff0000
+ec graph.trufae rgb:6090f0
+ec graph.current rgb:0000ff
+ec graph.traced rgb:ffff00
+ec gui.cflow rgb:ffff00
+ec gui.dataoffset rgb:ffff00
+ec gui.background rgb:000000
+ec gui.alt_background rgb:ffffff
+ec gui.border rgb:000000
+ec highlight rgb:ff0000

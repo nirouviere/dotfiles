@@ -14,7 +14,7 @@ ec args rgb:ff0000
 
 # Instruction color scheme
 ec comment rgb:f030f0
-ec usrcmt rgb:f030f0
+ec usrcmt rgb:ad5bff
 ec args rgb:f06030
 ec fname rgb:f06000
 ec floc rgb:00ffff
@@ -41,8 +41,8 @@ ec crypto rgb:f00060
 ec jmp rgb:00f000
 ec cjmp rgb:00f000
 ec call rgb:ffaf00
-ec nop rgb:0000ff
-ec ret rgb:0000ff
+ec nop rgb:00f000
+ec ret rgb:ad5bff
 ec trap rgb:f06030
 ec swi rgb:ff00ff
 ec cmp rgb:00f000

@@ -1,0 +1,64 @@
+###################### Misc
+e graph.offset=true
+e scr.color = 3 # all terminal I use support truecolor
+
+###################### Colors
+
+# Instruction color scheme
+ec comment rgb:f030f0
+ec usrcmt rgb:ad5bff
+ec args rgb:f06030
+ec fname rgb:f06000
+ec floc rgb:9999ff
+ec fline rgb:9999ff
+ec flag rgb:9999ff
+ec label rgb:9999ff
+ec help rgb:00ff00
+ec flow rgb:9999ff
+ec flow2 rgb:6090f0
+ec prompt rgb:000000
+ec offset rgb:000000
+ec input rgb:000000
+ec invalid rgb:f06030
+ec other rgb:000000
+ec b0x00 rgb:00ff00
+ec b0x7f rgb:9999ff
+ec b0xff rgb:f06030
+ec math rgb:00b300
+ec bin rgb:00b300
+ec btext rgb:000000
+ec push rgb:00b300
+ec pop rgb:00b300
+ec crypto rgb:f00060
+ec jmp rgb:00b300
+ec cjmp rgb:00b300
+ec call rgb:ffaf00
+ec nop rgb:00b300
+ec ret rgb:ad5bff
+ec trap rgb:f06030
+ec swi rgb:ff00ff
+ec cmp rgb:00b300
+ec reg rgb:000000
+ec creg rgb:9999ff
+ec num rgb:f00060
+ec mov rgb:00b300
+ec ai.read rgb:00ff00
+ec ai.write rgb:0000ff
+ec ai.exec rgb:ff0000
+ec ai.seq rgb:ff00ff
+ec ai.ascii rgb:000000
+ec graph.box rgb:f0f0f0
+ec graph.box2 rgb:000000
+ec graph.box3 rgb:ff00ff
+ec graph.box4 rgb:7f7f7f
+ec graph.true rgb:00ff00
+ec graph.false rgb:ff0000
+ec graph.trufae rgb:6090f0
+ec graph.current rgb:0000ff
+ec graph.traced rgb:ffff00
+ec gui.cflow rgb:000000
+ec gui.dataoffset rgb:000000
+ec gui.background rgb:000000
+ec gui.alt_background rgb:000000
+ec gui.border rgb:f0f0f0
+ec highlight rgb:ff0000

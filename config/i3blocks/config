@@ -74,8 +74,8 @@ color=#ef6191
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 instance=enp0s3
-#command=printf "\\uf0ec " && /home/nrouviere/.config/i3blocks/scripts/iface
-command=/home/nrouviere/.config/i3blocks/scripts/iface
+command=printf "\\uf0ec " && /home/nrouviere/.config/i3blocks/scripts/iface
+#command=/home/nrouviere/.config/i3blocks/scripts/iface
 color=#00FF00
 interval=10
 

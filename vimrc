@@ -487,11 +487,9 @@ endif
 set t_ZH=[3m
 set t_ZR=[23m
 
-let mapleader = " "
 inoremap jj <Esc>
 
 nnoremap <Leader>s :w<CR>
-nnoremap <Leader>q :q<CR>
 
 function! s:check_back_space() abort
   let col = col('.') - 1

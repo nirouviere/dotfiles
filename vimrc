@@ -46,6 +46,11 @@ Plug 'pprovost/vim-ps1'
 " Bash
 Plug 'vim-scripts/bash-support.vim'
 
+" Docker
+Plug 'ekalinin/dockerfile.vim'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
 "*****************************************************************************
 "*****************************************************************************
 

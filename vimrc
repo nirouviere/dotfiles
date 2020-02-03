@@ -501,3 +501,9 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+hi Pmenu cterm=none ctermfg=250 ctermbg=235 gui=underline guifg=#bcbcbc guibg=#262626
+hi PmenuSel cterm=bold,underline ctermfg=250 ctermbg=131 gui=underline guifg=#bcbcbc guibg=#af5f5f
+
+hi Normal guibg=NONE ctermbg=NONE
